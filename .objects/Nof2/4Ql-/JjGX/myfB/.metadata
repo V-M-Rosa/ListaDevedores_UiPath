@@ -1,0 +1,14 @@
+﻿{
+  "Name": "UF",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "myfBWKSM4UiBZ1var8PZVQ",
+  "Reference": "jAg1dwaLhkehL2d0sXOxHw/myfBWKSM4UiBZ1var8PZVQ",
+  "ParentRef": "jAg1dwaLhkehL2d0sXOxHw/JjGXgzZxtUKwYHbfd7thVg",
+  "Created": "2025-07-02T19:31:20.9439903Z",
+  "Updated": "2025-07-02T19:31:20.9439903Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

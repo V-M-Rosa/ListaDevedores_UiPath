@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="_9x3KmhTqUKNmCZeoMgbew" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="listadevedores.pgfn.gov.br/resultado" CVScreenId="1330fb7e-dce7-4bda-8da6-c8fff958f5a1" CvElementArea="303, 346, 1314, 64" CvType="InputBox" DesignTimeRectangle="351, 369, 61, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='STRONG' /&gt;" Guid="6025877d-66c9-4544-93d3-02abc3587cdb" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2bcf93478dad5a61b8d859b57ea71dba.png" xmlns="">0Pe_QMQmleESHsxBppiWDeQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

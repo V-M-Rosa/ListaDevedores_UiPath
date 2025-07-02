@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="_OxKcOnS-0uOvdTR4GIJfA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="listadevedores.pgfn.gov.br" DesignTimeRectangle="305, 650, 278, 50" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;dev-root&amp;gt;dev-consulta&amp;gt;main&amp;gt;dev-filtros&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="7bf87edc-6c86-4bc9-ae26-0bbddc4fccca" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="TopLeft" X="49" Y="22" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="06200dead775b9a771125b88688d535d.png" xmlns="">0-1bD76MY4kqg0jbkYsHCBw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

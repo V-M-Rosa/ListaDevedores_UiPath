@@ -1,0 +1,55 @@
+﻿{
+  "Metadata": {
+    "Id": "fb44feb7-3335-4b56-ae61-63d9faad4d4d",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "FormularioEntrada",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "Informe o valor máximo da consulta",
+        "tableView": true,
+        "validate": {
+          "required": true
+        },
+        "key": "valorMaximo",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Pesquisar por estado",
+        "tableView": false,
+        "key": "filtroEstado",
+        "type": "checkbox",
+        "input": true,
+        "defaultValue": false
+      },
+      {
+        "label": "Informe o estado (UF)",
+        "tableView": true,
+        "key": "estado",
+        "conditional": {
+          "show": true,
+          "when": "filtroEstado",
+          "eq": "true"
+        },
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SxbRegHhgk6prTyKOpPTzA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="listadevedores.pgfn.gov.br" CVScreenId="c463dc21-4c61-4da1-bf6d-c550904eefa8" CvElementArea="643, 585, 285, 40" CvType="InputBox" DesignTimeRectangle="645, 587, 283, 38" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='faixaMaximaInput' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-valid' placeholder='Valor máximo' aaname='Valor máximo' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="1f882def-f53e-463c-aabd-6820b76d6dd7" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c463dc21-4c61-4da1-bf6d-c550904eefa8" CvTextArea="643, 560, 84, 14" CvTextArgument="Valor máximo" CvType="Text" DesignTimeRectangle="645, 560, 82, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Valor máximo' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Valor máximo' /&gt;" Guid="bbe7b217-2eca-462a-aa3a-27f75c9756de" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2417325a66746d60db31f5c2018130a3.png" xmlns="">04JIS4l8YF0mMyhnSwHgpWg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

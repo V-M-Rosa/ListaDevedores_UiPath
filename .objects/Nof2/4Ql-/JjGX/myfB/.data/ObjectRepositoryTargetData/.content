@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SVVAb6RIiUOqJZp12P3k3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="listadevedores.pgfn.gov.br" CVScreenId="2eeb03e0-abd4-4b16-9869-f4e4222fe619" CvElementArea="303, 782, 313, 41" CvType="InputBox" DesignTimeRectangle="305, 784, 310, 38" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='ufInput' tag='SELECT' type='' class='form-select ng-untouched ng-pristine ng-valid' aaname='UF' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d4264df5-70ca-43cc-b5f8-d31c6b68e93d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="2eeb03e0-abd4-4b16-9869-f4e4222fe619" CvTextArea="303, 758, 19, 13" CvTextArgument="UF" CvType="Text" DesignTimeRectangle="305, 757, 16, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='UF' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='UF' /&gt;" Guid="c13a543f-e656-4f0f-8d72-48612eabbbae" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="48f6b8d05b503a9f8232977446b09c9d.png" xmlns="">0qaC5neuB5kSJGfiSOqD1qA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

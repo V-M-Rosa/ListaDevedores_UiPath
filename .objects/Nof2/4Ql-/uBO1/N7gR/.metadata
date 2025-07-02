@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Consultar LIMPAR",
+  "Type": "Element",
+  "Id": "N7gRZjxbNkisf_et4f7Opg",
+  "Reference": "jAg1dwaLhkehL2d0sXOxHw/N7gRZjxbNkisf_et4f7Opg",
+  "ParentRef": "jAg1dwaLhkehL2d0sXOxHw/uBO1C_fBpEOzevXBVkvZXw",
+  "Created": "2025-07-02T19:49:55.9234576Z",
+  "Updated": "2025-07-02T19:49:55.9234576Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.8.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,286 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AcessarSite" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="estado" Type="InArgument(x:String)" />
+    <x:Property Name="filtroEstado" Type="InArgument(x:Boolean)" />
+    <x:Property Name="valorMaximo" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>AcessarSite_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AcessarSite" sap:VirtualizedContainerService.HintSize="1309,3065" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="qtdNumerica" />
+      <Variable x:TypeArguments="x:String" Name="qtdTexto" />
+      <Variable x:TypeArguments="x:String" Name="caminhoLog">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), &quot;log_execucao.txt&quot;)" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), &quot;log_execucao.txt&quot;)]" sap:VirtualizedContainerService.HintSize="502,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;) &amp; &quot; - Iniciando automação&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Lista de Devedores - PGFN" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="502,2877" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4a5d4c56-905b-49a4-9354-dd8d0a9ae15a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="468,2637" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Valor máximo'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4a5d4c56-905b-49a4-9354-dd8d0a9ae15a" Text="[valorMaximo]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="listadevedores.pgfn.gov.br" CVScreenId="34666ea1-fe56-4755-88e6-b5e59326ce2b" ContentHash="Jo0s6JyHJUy3akAu_SD0HQ" CvElementArea="643, 885, 286, 41" CvType="InputBox" DesignTimeRectangle="645, 887, 283, 38" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='faixaMaximaInput' tag='INPUT' type='text' class='form-control ng-untouched ng-pristine ng-valid' placeholder='Valor máximo' aaname='Valor máximo' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="3422b31e-60b3-4d1c-bb2c-4c795cb96832" InformativeScreenshot="2417325a66746d60db31f5c2018130a3.png" IsResponsive="True" Reference="jAg1dwaLhkehL2d0sXOxHw/5f8ZZdNSdkuwybr4k0Tv8Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="34666ea1-fe56-4755-88e6-b5e59326ce2b" CvTextArea="643, 860, 84, 14" CvTextArgument="Valor máximo" CvType="Text" DesignTimeRectangle="645, 860, 82, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Valor máximo' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Valor máximo' /&gt;" Guid="12aa3a69-158e-45df-a525-0bba1c3dbc09" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <If Condition="[filtroEstado = True]" sap:VirtualizedContainerService.HintSize="434,564" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,337" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'UF'" EmptyFieldMode="MultiLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,277" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="4a5d4c56-905b-49a4-9354-dd8d0a9ae15a" Text="[estado]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="listadevedores.pgfn.gov.br" CVScreenId="85e60a23-d164-4fb5-b141-2dba98f6965e" ContentHash="VNZ-lQvKQU607EpsGNecpw" CvElementArea="303, 538, 313, 40" CvType="InputBox" DesignTimeRectangle="305, 539, 310, 38" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='ufInput' tag='SELECT' type='' class='form-select ng-untouched ng-pristine ng-valid' aaname='UF' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="da04eeb8-155e-49c9-9871-2cfb0722955d" InformativeScreenshot="94a54384507c00404d9190eae846f384.png" Reference="jAg1dwaLhkehL2d0sXOxHw/WsihmFJtzk-ZG5APNzsU8A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="85e60a23-d164-4fb5-b141-2dba98f6965e" CvTextArea="303, 513, 19, 13" CvTextArgument="UF" CvType="Text" DesignTimeRectangle="305, 512, 16, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='UF' tag='LABEL' type='' class='form-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='UF' /&gt;" Guid="5add69cc-584d-434b-86bf-4cd71a2c3480" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <uix:NTypeInto.VerifyOptions>
+                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      </uix:VerifyExecutionTypeIntoOptions>
+                    </uix:NTypeInto.VerifyOptions>
+                  </uix:NTypeInto>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Consultar LIMPAR'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4a5d4c56-905b-49a4-9354-dd8d0a9ae15a" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="listadevedores.pgfn.gov.br" ContentHash="_OxKcOnS-0uOvdTR4GIJfA" DesignTimeRectangle="305, 650, 278, 50" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;dev-root&amp;gt;dev-consulta&amp;gt;main&amp;gt;dev-filtros&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="7bf87edc-6c86-4bc9-ae26-0bbddc4fccca" InformativeScreenshot="06200dead775b9a771125b88688d535d.png" Reference="jAg1dwaLhkehL2d0sXOxHw/N7gRZjxbNkisf_et4f7Opg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="TopLeft" X="49" Y="22" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NGetText DisplayName="Get Text '340.731'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4a5d4c56-905b-49a4-9354-dd8d0a9ae15a" Version="V5">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="listadevedores.pgfn.gov.br/resultado" CVScreenId="1330fb7e-dce7-4bda-8da6-c8fff958f5a1" ContentHash="_9x3KmhTqUKNmCZeoMgbew" CvElementArea="303, 346, 1314, 64" CvType="InputBox" DesignTimeRectangle="351, 369, 61, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='STRONG' /&gt;" Guid="6025877d-66c9-4544-93d3-02abc3587cdb" InformativeScreenshot="2bcf93478dad5a61b8d859b57ea71dba.png" Reference="jAg1dwaLhkehL2d0sXOxHw/-ECv_OpX_0SnvapUZICs4A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[qtdNumerica]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[CInt(qtdTexto.Split(" "c)(0).Replace(".", "").Trim)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[qtdNumerica &lt; 50000]" sap:VirtualizedContainerService.HintSize="434,630" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Exportar'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4a5d4c56-905b-49a4-9354-dd8d0a9ae15a" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="listadevedores.pgfn.gov.br/resultado" CVScreenId="4b07601e-dfb2-477e-be5f-f397373094e2" ContentHash="6ukUV4cADEmgWJpO8kQPnA" CvElementArea="302, 918, 140, 50" CvTextArea="336, 936, 72, 13" CvTextArgument="EXPORTAR" CvType="Button" DesignTimeRectangle="305, 920, 135, 45" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" Guid="4a7346c6-adad-45a3-905f-208d75f94cac" InformativeScreenshot="761c4788261d91fe969885402e4ab019.png" Reference="jAg1dwaLhkehL2d0sXOxHw/CXaWGKKi80iS0fXhCB_I9A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[caminhoLog]" sap:VirtualizedContainerService.HintSize="382,156" sap2010:WorkflowViewState.IdRef="AppendLine_3" Text="[&quot;Exportação ignorada - total de registros ultrapassa o limite: &quot; &amp; qtdNumerica.ToString]" UseDefaultEncoding="False" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[caminhoLog]" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="AppendLine_2" Text="[&quot;Exportação concluída - &quot; &amp; Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;)]" UseDefaultEncoding="False" />
+            <ui:AppendLine File="{x:Null}" DisplayName="Append Line" FileName="[caminhoLog]" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="AppendLine_1" Text="[&quot;Final da automação - &quot; &amp; Now.ToString(&quot;yyyy-MM-dd HH:mm:ss&quot;)]" UseDefaultEncoding="False" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1912, -8, 1936, 1048" BrowserType="Chrome" ContentHash="dRO8l7q6t0iqZL8ifpJwTA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGjSURBVDhPxVG/L0NRFP4WG5uRhRgMEoMYEH8Ak1gkBovBP2CQSAzae+9rX1vqVyRlFaugve/19VXrV1tEiIjEj6ULFolYLEfufbTxgljEl5zk3nO+77v3nAP8KRLjdf7U72GJVhTiZSRZ1F/6HWTQxekSIR8hpESnv/wzJBtBIU6wBeFwlmCzAz/le7hmPRxxj1zEM1BRnCNYfNRP/RqSreB4gWC9i1V4Zo9ITTf66Z8hea9+bcf0RBb3DByDcJFQrUxUuLbogS36q+Kj5Ro4oRtkzTU9NCmKun9ltD9DSBsRuFO1mmsZY7DEHTKh7qqBZBO4WiUkg5P6vi0a4BiP2DFfIMVQhecY80izPCyjpSp2Qs1wwy96ZVnzFdusT+e3Ah3YDLTr8yZvQiacw2WCkGLDVbFCim+hoCdNyEeVyRNs0Vapp/kA3PCDXq1qyRFlbJj1H+JBnC8T9mYIezHCbpRwsqi28AzJOGy2jtI86c3sqnqMcLmiHpt9NxBdyJk5pHlJD04HL0KyM9j8FpJdw+LHXk4UYbMS9mMHkGKk8sN/xRuDouVPS/SyrwAAAABJRU5ErkJggg==" InformativeScreenshot="0783edd3eab48a12581c8eb995fe784c.jpg" Reference="jAg1dwaLhkehL2d0sXOxHw/uBO1C_fBpEOzevXBVkvZXw" Selector="&lt;html app='chrome.exe' title='Lista de Devedores - PGFN' /&gt;" Url="https://www.listadevedores.pgfn.gov.br/" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
